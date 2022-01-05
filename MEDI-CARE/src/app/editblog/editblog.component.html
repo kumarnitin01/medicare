@@ -1,0 +1,105 @@
+<h2 class="text-left m-4">Create A Blog/News:</h2>
+<div class="form-container">
+  <form action="#" class="form">
+    <label for="title">Title: </label>
+    <input type="text" class="form-control" />
+    <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="validationDefault01">Article By:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="writer"
+          placeholder="Writer of Blog"
+          name="firstname"
+          required
+        />
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="validationDefault02">Date Published</label>
+        <input
+          type="date"
+          class="form-control"
+          id="validationDefault02"
+          name="dateofpub"
+          required
+        />
+      </div>
+    </div>
+    <label for="content">Content of Blog/News </label>
+    <textarea
+      name="blog"
+      id="blog"
+      cols="15"
+      rows="20"
+      class="form-control"
+      style="background-color: rgb(255, 255, 255, 0.7)"
+    ></textarea>
+    <label for="validationDefault03">Upload Photo:</label>
+    <div class="custom-file my-1">
+      <input
+        type="file"
+        class="custom-file-input"
+        id="customFile"
+        name="profile"
+      />
+      <label
+        class="custom-file-label"
+        for="customFile"
+        style="
+          width: 50%;
+          color: #666;
+          background-color: rgba(255, 255, 255, 0.7);
+        "
+        >Choose file</label
+      >
+    </div>
+    <button class="btn btn-primary btn-lg m-5">Upload</button>
+  </form>
+</div>
+<h2 class="text-left m-4">List of All Blogs/News:</h2>
+<section class="hospital-list">
+  <table class="table table-hover" style="font-size: 1.5rem">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Writer</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="#" class="btn btn-secondary">Edit</a
+          ><a href="#" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="#" class="btn btn-secondary">Edit</a
+          ><a href="#" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="#" class="btn btn-secondary">Edit</a
+          ><a href="#" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

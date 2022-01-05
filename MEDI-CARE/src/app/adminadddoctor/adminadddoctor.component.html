@@ -1,0 +1,187 @@
+<h2 class="text-left m-4">Fill The Below Details For Doctor:</h2>
+
+<div class="form-container">
+  <form
+    class="form"
+    [formGroup]="validationform"
+    (ngSubmit)="validSubmit()"
+    enctype="multipart/form-data"
+  >
+    <div class="form-row my-4">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault01">First name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault01"
+          placeholder="First name"
+          formControlName="firstname"
+          required
+        />
+        <div *ngIf="submit && e.firstname.errors">
+          <span *ngIf="e.firstname.errors.required" style="color: red"
+            >Please provide first name Name</span
+          >
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault02">Last name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault02"
+          placeholder="Last name"
+          formControlName="lastname"
+          required
+        />
+        <div *ngIf="submit && e.lastname.errors">
+          <span *ngIf="e.lastname.errors.required" style="color: red"
+            >Please provide last Name</span
+          >
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefaultUsername">Specilize field</label>
+        <input
+          type="text"
+          class="form-control"
+          id="specilizeField"
+          placeholder=""
+          formControlName="specilizeField"
+          aria-describedby="inputGroupPrepend2"
+          required
+        />
+        <div *ngIf="submit && e.SpecilizeField.errors">
+          <span *ngIf="e.SpecilizeField.errors.required" style="color: red"
+            >Please provide Specilize Field</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="form-row my-4">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault04">Hospital</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault04"
+          placeholder="Hospital name"
+          formControlName="hospital"
+          required
+        />
+      </div>
+      <div *ngIf="submit && e.hospital.errors">
+        <span *ngIf="e.hospital.errors.required" style="color: red"
+          >Please provide hospital Name</span
+        >
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault03">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault03"
+          placeholder="City"
+          formControlName="city"
+          required
+        />
+      </div>
+
+      <div class="col-md-5 mb-3">
+        <label for="validationDefault04">Contact No.</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault04"
+          placeholder="Phone Number"
+          formControlName="phonenumber"
+          required
+        />
+        <div *ngIf="submit && e.phonenumber.errors">
+          <span *ngIf="e.phonenumber.errors.required" style="color: red"
+            >Please provide phone Name</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="form-row my-4">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault04">Available Days</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault04"
+          placeholder=" Enter days of week"
+          formControlName="weekdays"
+          required
+        />
+        <div *ngIf="submit && e.weekdays.errors">
+          <span *ngIf="e.weekdays.errors.required" style="color: red"
+            >Please provide Available Days</span
+          >
+        </div>
+      </div>
+
+      <div class="col-md-5 mb-3">
+        <label for="validationDefault04">Experience</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault04"
+          placeholder="Years of Experience"
+          formControlName="expr"
+          required
+        />
+      </div>
+      <div *ngIf="submit && e.expr.errors">
+        <span *ngIf="e.expr.errors.required" style="color: red"
+          >Please provide Experience</span
+        >
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-lg m-5" type="submit">Submit</button>
+    {{ success }}
+  </form>
+
+  <h2 class="text-left m-4">List of Available Doctors:</h2>
+  <section class="hospital-list">
+    <table class="table table-hover" style="font-size: 1.5rem">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Specility</th>
+          <th scope="col">Available Days</th>
+          <th scope="col">Contact no.</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of dataList; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ row.name }}</td>
+          <td>{{ row.Specilization }}</td>
+          <td>{{ row.Weekday }}</td>
+          <td>{{ row.Contact }}</td>
+          <td>
+            <a
+              href="#"
+              class="btn btn-secondary"
+              href="javascript: void(0);"
+              [routerLink]="['/dashboard/adddoctor', row._id]"
+              >Edit</a
+            ><a
+              href="#"
+              class="btn btn-danger"
+              href="javascript: void(0);"
+              (click)="delete(row._id)"
+              >Delete</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+

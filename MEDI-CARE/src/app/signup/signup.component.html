@@ -1,0 +1,112 @@
+<main>
+  <div class="container-box">
+    <div class="form-container">
+      <form
+        action="#"
+        class="signin-form"
+        [formGroup]="signUpForm"
+        (ngSubmit)="validation()"
+      >
+        <h2 class="title">Create An Account</h2>
+        <div class="form-row">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter Your Name"
+            autocomplete="off"
+            class="form-control col-4"
+            formControlName="name"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            autocomplete="off"
+            class="form-control col-4"
+            formControlName="email"
+          />
+        </div>
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Enter Your Address"
+          autocomplete="off"
+          class="form-control"
+          formControlName="address"
+        />
+        <div class="form-row" id="gender">
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="Male"
+              formControlName="gender"
+              selected
+            />
+            <span>Male</span>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="Female"
+              formControlName="gender"
+            />
+            <span>Female</span>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="Prefer Not to say"
+              formControlName="gender"
+            />
+            <span>Prefer not to say</span>
+          </label>
+        </div>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Enter phone number"
+          class="form-control"
+          formControlName="phone"
+        />
+        <div class="form-row">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Create Password"
+            class="form-control col-4"
+            formControlName="password"
+          />
+          <input
+            type="password"
+            name="re-password"
+            id="re-password"
+            placeholder="Confirm Password"
+            class="form-control col-4"
+            formControlName="passwordMatch"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-submit">Sign Up</button>
+      </form>
+    </div>
+    <div class="panel-container">
+      <div class="content">
+        <h3 class="content-heading">Already have an account</h3>
+        <a routerLink="/register/login" class="btn btn-transparent">Sign In</a>
+      </div>
+      <img
+        src="../../assets/Images/undraw_press_play_bx2d.svg"
+        class="image"
+        alt=""
+      />
+    </div>
+  </div>
+</main>

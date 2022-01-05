@@ -1,0 +1,66 @@
+@import "../../assets/utilities";
+
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  p,
+  a {
+    margin: auto;
+  }
+}
+
+.link {
+  color: $color-primary;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.3rem 2rem;
+  &:hover {
+    text-decoration: none;
+    color: $color-secondary;
+  }
+}
+.emergency-head {
+  background-color: $color-secondary-light;
+  height: 100%;
+  padding: 1.3rem 1.2rem;
+  font-size: 1.7rem;
+  color: #eee;
+  margin-bottom: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 7rem;
+  background-color: #04befe;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  color: #fff;
+
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    color: $color-tertiary-light;
+  }
+}
+
+.login-btn {
+  display: inline-block;
+  color: #eee;
+  padding: 1.3rem 1.2rem;
+  margin-top: 1rem;
+  background-color: $color-secondary;
+  border-radius: 4px;
+  &:hover {
+    background-color: $color-secondary-dark;
+    color: #fff;
+  }
+}

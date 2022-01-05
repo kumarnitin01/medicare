@@ -1,0 +1,33 @@
+<main>
+  <div class="dashboard">
+    <div class="title-bar d-flex">
+      <h2 class="title m-3 text-white">Dashboard | Home</h2>
+      <a href="" class="logout btn btn-danger mx-3" (click)="logout()"
+        >Log Out</a
+      >
+    </div>
+    <div class="main-content row" style="margin: 0 !important">
+      <div class="menu-bar col-3">
+        <a routerLink="/dashboard/addhospital" class="btn menu-link"
+          ><li class="menu-group-item">Add Hospital</li></a
+        >
+        <a routerLink="/dashboard/listhospital" class="btn menu-link"
+          ><li class="menu-group-item">List Hospital</li></a
+        >
+        <a routerLink="/dashboard/addlab" class="btn menu-link"
+          ><li class="menu-group-item">Add Lab Center</li></a
+        >
+        <a routerLink="/dashboard/adddoctor" class="btn menu-link"
+          ><li class="menu-group-item">Add Doctor</li></a
+        >
+
+        <a routerLink="/dashboard/editblog" class="btn menu-link"
+          ><li class="menu-group-item">Write Blog/News</li></a
+        >
+      </div>
+      <div class="details-container col-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</main>

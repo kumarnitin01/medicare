@@ -1,0 +1,161 @@
+<h2 class="text-left m-4">Fill The Below Details For Hospital:</h2>
+
+<div class="form-container">
+  <form
+    action="#"
+    class="form"
+    [formGroup]="validationform"
+    (ngSubmit)="validSubmit()"
+    enctype="multipart/form-data"
+  >
+    <label for="name">Hospital Name</label>
+    <input
+      type="text"
+      name="name"
+      id="hname"
+      placeholder="Enter Hospital Name"
+      class="form-control"
+      formControlName="hospitalname"
+      required
+    />
+    <div *ngIf="submit && e.hospitalname.errors">
+      <span *ngIf="e.hospitalname.errors.required" style="color: red"
+        >Please provide hospital Name</span
+      >
+    </div>
+    <label for="location">Location</label>
+    <input
+      type="text"
+      formControlName="location"
+      id="location"
+      placeholder="location of hospital"
+      class="form-control"
+      required
+    />
+    <div *ngIf="submit && e.location.errors">
+      <span *ngIf="e.location.errors.required" style="color: red"
+        >Please provide location
+      </span>
+    </div>
+    <div class="form-row">
+      <div class="col-4">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          id="email"
+          placeholder="Email address of hospital"
+          class="form-control"
+          required
+        />
+        <div *ngIf="submit && e.email.errors">
+          <span *ngIf="e.email.errors.required" style="color: red"
+            >Please provide email</span
+          >
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="bed">Beds Available</label>
+        <input
+          type="text"
+          formControlName="bed"
+          id="bed"
+          placeholder="Bed Availbility in Hospital"
+          class="form-control"
+          required
+        />
+        <div *ngIf="submit && e.bed.errors">
+          <span *ngIf="e.bed.errors.required" style="color: red"
+            >Please provide Bed Availbility</span
+          >
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="phoneH">Phone</label>
+        <input
+          type="text"
+          formControlName="phone"
+          id="phoneH"
+          placeholder="Phone Number "
+          class="form-control"
+          required
+        />
+        <div *ngIf="submit && e.phone.errors">
+          <span *ngIf="e.phone.errors.required" style="color: red"
+            >Please provide phone Name</span
+          >
+        </div>
+      </div>
+    </div>
+    <label for="specility">Specilize field</label>
+    <textarea
+      formControlName="specilization"
+      id="specility"
+      cols="30"
+      rows="10"
+      class="form-control"
+      placeholder="Specilities of hospital i.e heart,surgery,neuroscience etc."
+    ></textarea>
+    <div *ngIf="submit && e.specilization.errors">
+      <span *ngIf="e.specilization.errors.required" style="color: red"
+        >Please provide specilization</span
+      >
+    </div>
+    <!-- <label for="validationDefault03">Upload Photo:</label>
+    <div class="custom-file my-1">
+      <input
+        type="file"
+        class="custom-file-input"
+        id="customFile"
+        name="profile"
+      />
+      <label
+        class="custom-file-label"
+        for="customFile"
+        style="
+          width: 50%;
+          color: #666;
+          background-color: rgba(255, 255, 255, 0.7);
+        "
+        >Choose file</label
+      >
+    </div> -->
+    <button class="btn btn-primary btn-lg m-5" type="submit">Submit</button>
+    {{ success }}
+  </form>
+</div>
+
+<!-- <h2 class="text-left m-4 mt-5">List of Available Hospitals:</h2>
+<section class="hospital-list">
+  <table class="table table-hover" style="font-size: 1.5rem">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Beds Available</th>
+        <th scope="col">Contact no.</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of dataList; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ row.hospitalName }}</td>
+        <td>{{ row.Location }}</td>
+        <td>{{ row.bedAvailable }}</td>
+        <td>{{ row.Phone }}</td>
+        <td>
+          <a
+            href="javascript: void(0);"
+            [routerLink]="['/dashboard/editseed', row._id]"
+          >
+            class="btn btn-secondary" >Edit</a
+          ><a href="javascript: void(0);" class="btn btn-danger">Delete</a>
+           (click)="delete(row._id)" 
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</section>
+-->

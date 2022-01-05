@@ -1,0 +1,51 @@
+<main>
+  <div class="form-container">
+    <h1 class="form-heading">Admin Login</h1>
+    <form
+      action=""
+      class="form"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <input
+        type="text"
+        name="login"
+        id="login"
+        placeholder="Username"
+        formControlName="username"
+        autocomplete="off"
+        required
+      />
+      <div *ngIf="submitted && e.username.errors">
+        <span
+          *ngIf="e.username.errors.required"
+          style="color: #333; margin-left: 15px; font-size: 14px"
+        >
+          Usernmame required</span
+        >
+      </div>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        formControlName="password"
+        required
+      />
+      <div *ngIf="submitted && e.password.errors">
+        <span
+          *ngIf="e.password.errors.required"
+          style="color: #333; margin-left: 15px; font-size: 14px"
+          >Password required</span
+        >
+      </div>
+      <button type="submit" class="btn button">Log In</button>
+      <div class="errorSec">
+        <span style="color: #333; margin-left: 15px; font-size: 14px">{{
+          errorMsg
+        }}</span>
+      </div>
+    </form>
+  </div>
+</main>
+

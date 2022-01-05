@@ -1,0 +1,112 @@
+@import "../../assets/utilities";
+
+.form-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200rem;
+    height: 200rem;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+  }
+}
+
+.signin-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  input {
+    width: 40rem;
+    height: 5.5rem;
+    background-color: #f0f0f0;
+    margin-bottom: 1.6rem;
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+      font-weight: 500;
+    }
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: #444;
+  margin-bottom: 10rem;
+}
+.panel-container {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  top: 13%;
+  left: 0;
+}
+
+.image {
+  width: 65rem;
+}
+
+.content {
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+  margin-left: 10rem;
+  padding-left: 25rem;
+
+  &-heading {
+    font-size: 3rem;
+  }
+}
+
+.btn-submit {
+  font-size: 2rem;
+  background-color: #4481eb;
+  padding: 1rem 2.4rem;
+  border-radius: 3rem;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  font-weight: 500;
+  transform: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: #04befe;
+  }
+  &:active {
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+}
+.btn-transparent {
+  font-size: 1.8rem;
+  border: 3px solid #f0f0f0;
+  padding: 0.8rem 1.7rem;
+  border-radius: 2.5rem;
+  color: #f0f0f0;
+  margin-top: 2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+}

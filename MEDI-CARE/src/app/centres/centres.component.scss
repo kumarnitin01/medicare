@@ -1,0 +1,48 @@
+@import "../../assets/utilities";
+* {
+  scroll-behavior: smooth;
+}
+main {
+  margin-bottom: 10rem;
+}
+
+.heading-primary {
+  font-size: 2.7rem;
+  color: $color-primary-dark;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 4rem auto;
+}
+img {
+  width: 100%;
+  border-radius: 18px;
+  width: 80%;
+  margin-left: 35px;
+}
+
+.cards {
+  background-color: whitesmoke;
+  padding: 18px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.list-group-item {
+  text-align: center;
+}
+
+.list-group-item:hover {
+  background-color: lightcoral;
+  color: white;
+  font-size: large;
+}
+
+button {
+  margin-top: 25px;
+  margin-left: 24px;
+}
+
+button:hover {
+  background-color: lightcoral;
+}

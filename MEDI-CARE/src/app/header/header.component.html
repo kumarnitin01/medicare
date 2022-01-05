@@ -1,0 +1,56 @@
+<div class="header">
+  <div class="links">
+    <a routerLink="doctors" class="link">Book An Appointment</a> |
+    <a href="contact" class="link">FAQ</a>
+  </div>
+  <h3 class="emergency-head">For Emergencies : +911166912300</h3>
+</div>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <img
+        src="../../assets/Images/undraw_medicine_b1ol.svg"
+        alt=""
+        width="75"
+      />
+    </div>
+    <ul class="nav-list d-flex flex-end">
+      <li class="nav-link">
+        <a routerLink="" class="btn">Home</a>
+      </li>
+      <li class="nav-link">
+        <a routerLink="services" class="btn">Services</a>
+      </li>
+      <li class="nav-link">
+        <a routerLink="news" class="btn">News</a>
+      </li>
+      <li class="nav-link">
+        <a routerLink="contact" class="btn">Contact</a>
+      </li>
+      <li *ngIf="!user" class="nav-link">
+        <a
+          routerLink="register"
+          class="link login-btn"
+          style="display: inline-block; padding: 5px 10px; margin-left: 4rem"
+          >Login</a
+        >
+        <h4 class="text-white d-inline pl-2 pr-2">|</h4>
+        <a
+          routerLink="register/signup"
+          class="link login-btn"
+          style="
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: green;
+            font-size: 14px;
+          "
+          >Sign Up</a
+        >
+      </li>
+      <button *ngIf="user" class="link warn-btn" (click)="logout()">
+        Logout
+      </button>
+    </ul>
+  </div>
+</nav>

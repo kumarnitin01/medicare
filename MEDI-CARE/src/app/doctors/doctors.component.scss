@@ -1,0 +1,83 @@
+@import "../../assets/utilities";
+* {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-bottom: 10rem;
+}
+
+.heading-primary {
+  font-size: 2.7rem;
+  color: $color-primary-dark;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 4rem auto;
+}
+img {
+  width: 100%;
+  border-radius: 18px;
+  width: 80%;
+  margin-left: 35px;
+}
+
+.cards {
+  background-color: whitesmoke;
+  padding: 18px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.list-group-item {
+  text-align: center;
+}
+
+.list-group-item:hover {
+  background-color: lightcoral;
+  color: white;
+  font-size: large;
+}
+
+button {
+  margin-top: 25px;
+  margin-left: 24px;
+}
+
+button:hover {
+  background-color: lightcoral;
+}
+
+.form-container {
+  padding: 2rem 17rem;
+  background: linear-gradient(
+    45deg,
+    $color-secondary-light,
+    $color-secondary-dark
+  );
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .form {
+    font-size: 1.7rem;
+    color: #fff;
+    padding-left: 1rem;
+    input {
+      height: 4rem;
+      font-size: inherit;
+      border-radius: 0.8rem;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    textarea {
+      border-radius: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 0.8rem;
+      font-size: inherit;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #666;
+      font-size: 1.5rem;
+      padding-left: 0.8rem;
+    }
+  }
+}

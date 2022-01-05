@@ -1,0 +1,47 @@
+@import "../../assets/utilities";
+
+// .contact {
+//   width: 100%;
+//   height: 100%;
+//   background: url(../../assets/Images/clip-hiding-from-the-viruses.png);
+//   padding: 10rem 1rem;
+//   margin-bottom: 10rem;
+// }
+
+img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+p {
+  padding-top: 15px;
+}
+.heading-primary {
+  font-size: 3rem;
+  color: $color-primary-dark;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.form {
+  textarea::placeholder,
+  input::placeholder,
+  input {
+    height: 3.5rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    color: #444;
+    padding-left: 0.7rem;
+  }
+}
+.faq {
+  margin-bottom: 10rem;
+}
+mat-expansion-panel-header {
+  background-color: rgb(215, 235, 248);
+}
+
+mat-expansion-panel {
+  margin: 7px;
+  padding: 3px;
+}
