@@ -22,11 +22,8 @@ export class LoginComponent implements OnInit {
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
-    // console.log(this.validation.value);
   }
   _initForm(): void {
-    console.log(this.validation.value);
-    this.validation.reset();
     this.submitted = false;
   }
   checkForm() {
@@ -34,13 +31,9 @@ export class LoginComponent implements OnInit {
     if (this.validation.valid) {
       this.service.loginUser(this.validation.value).subscribe((data) => {
         if (data) {
-          localStorage.setItem('currentUser', JSON.stringify(data));
-          console.log(data);
-          console.log(localStorage.getItem('currentUser'));
-          console.log('success!');
+          localStorage.setItem('currUser', JSON.stringify(data));
           this.router.navigate(['/']);
         } else {
-          console.log('Error! wrong username or password');
         }
       });
 

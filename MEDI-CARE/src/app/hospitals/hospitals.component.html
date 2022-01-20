@@ -1,6 +1,13 @@
 <main id="hospitals">
   <h1 class="heading-primary text-center">List of Hospitals</h1>
 
+  <div class="text-center">
+    <div class="spinner" id="spinner"></div>
+    <div class="no-data hidden" id="no-data">
+      <h1 class="heading-primary text-center">No data available</h1>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-6" *ngFor="let h of this.hospitals">
       <div class="row cards">
@@ -13,12 +20,78 @@
         </div>
         <div class="col-6">
           <ul class="list-group">
-            <li class="list-group-item disabled">{{ h.hospitalName }}</li>
-            <li class="list-group-item">{{ h.Specilization }}</li>
-            <li class="list-group-item">{{ h.Location }}</li>
-            <li class="list-group-item">{{ h.Email }}</li>
-            <li class="list-group-item">{{ h.Phone }}</li>
-            <li class="list-group-item">{{ h.bedAvailble }}</li>
+            <li class="list-group-item disabled">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Hospital:
+              </span>
+              &nbsp;{{ h.hospitalName }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Specilities:
+              </span>
+              &nbsp;{{ h.Specilization }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Location:
+              </span>
+              &nbsp;{{ h.Location }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Email Address:
+              </span>
+              &nbsp;{{ h.Email }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Contact:
+              </span>
+              &nbsp;{{ h.Phone }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Bed Availbility:
+              </span>
+              &nbsp;{{ h.bedAvailble }} Beds
+            </li>
           </ul>
         </div>
       </div>

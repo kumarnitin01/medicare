@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { apiService } from '../api.service';
 
@@ -16,7 +17,11 @@ import { apiService } from '../api.service';
 export class SignupComponent implements OnInit {
   signUpForm!: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder, private service: apiService) {}
+  constructor(
+    private fb: FormBuilder,
+    private service: apiService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
@@ -32,16 +37,15 @@ export class SignupComponent implements OnInit {
   _initForm(): void {
     this.signUpForm.reset();
     this.submitted = false;
+    this.router.navigate(['/register/login']);
   }
   validation(): void {
     this.submitted = true;
-    console.log(this.signUpForm.value);
     if (
       this.signUpForm.valid &&
       this.signUpForm.value.password === this.signUpForm.value.passwordMatch
     ) {
       delete this.signUpForm.value.passwordMatch;
-      console.log(this.signUpForm.value);
       // posting user data
       this.service
         .registerUser(this.signUpForm.value)

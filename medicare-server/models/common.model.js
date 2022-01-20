@@ -13,6 +13,7 @@ const commonModel = {
     try {
       return new Promise((resolve, reject) => {
         let data = conn.collection(collection).insertOne(params);
+
         resolve(data);
       });
     } catch (error) {

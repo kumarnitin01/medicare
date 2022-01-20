@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./hospitals.component.scss'],
 })
 export class HospitalsComponent implements OnInit {
-  hospitals: any;
+  hospitals: any = [];
   webAPI: any = 'http://localhost:3000/hospitals';
+  spinner: any;
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -17,5 +18,8 @@ export class HospitalsComponent implements OnInit {
     this.http.get(this.webAPI).subscribe((data: any) => {
       this.hospitals = data.data;
     });
+
+    this.spinner = document.getElementById('spinner');
+    this.spinner.classList.add('hidden');
   }
 }

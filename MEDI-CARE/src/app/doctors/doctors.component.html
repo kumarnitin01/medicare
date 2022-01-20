@@ -1,6 +1,13 @@
 <main id="doctors">
   <h1 class="heading-primary text-center">List of Doctors</h1>
 
+  <div class="text-center">
+    <div class="spinner hidden" id="spinner"></div>
+    <div class="no-data hidden" id="no-data">
+      <h1 class="heading-primary text-center">No data available</h1>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-6" *ngFor="let e of this.list">
       <div class="row cards">
@@ -15,12 +22,79 @@
         </div>
         <div class="col-6">
           <ul class="list-group">
-            <li class="list-group-item disabled">{{ e.name }}</li>
-            <li class="list-group-item">{{ e.Specilization }}</li>
-            <li class="list-group-item">{{ e.Experience }}</li>
-            <li class="list-group-item">{{ e.Hospital }}</li>
-            <li class="list-group-item">{{ e.Weekday }}</li>
-            <li class="list-group-item">{{ e.Contact }}</li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Doctor:
+              </span>
+              &nbsp;
+              {{ e.name }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Specilize In:
+              </span>
+              &nbsp; {{ e.Specilization }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Experience:
+              </span>
+              &nbsp;{{ e.Experience }} &nbsp; Years
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Hospital:
+              </span>
+              &nbsp;{{ e.Hospital }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Available On:
+              </span>
+              &nbsp;{{ e.Weekday }}
+            </li>
+            <li class="list-group-item">
+              <span
+                style="
+                  font-size: 1.5rem;
+                  color: #121212 !important;
+                  background-color: #ddd;
+                  padding: 0.2rem;
+                "
+                >Contact no.:
+              </span>
+              &nbsp;{{ e.Contact }}
+            </li>
           </ul>
         </div>
       </div>

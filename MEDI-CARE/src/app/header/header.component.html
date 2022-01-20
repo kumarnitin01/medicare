@@ -1,7 +1,7 @@
 <div class="header">
   <div class="links">
-    <a routerLink="doctors" class="link">Book An Appointment</a> |
-    <a href="contact" class="link">FAQ</a>
+    <a href="/doctors#appointment" class="link">Book An Appointment</a> |
+    <a href="/contact#faq" class="link">FAQ</a>
   </div>
   <h3 class="emergency-head">For Emergencies : +911166912300</h3>
 </div>
@@ -28,7 +28,7 @@
       <li class="nav-link">
         <a routerLink="contact" class="btn">Contact</a>
       </li>
-      <li *ngIf="!user" class="nav-link">
+      <li class="nav-link" *ngIf="!user; else noUser">
         <a
           routerLink="register"
           class="link login-btn"
@@ -48,9 +48,23 @@
           >Sign Up</a
         >
       </li>
-      <button *ngIf="user" class="link warn-btn" (click)="logout()">
-        Logout
-      </button>
+
+      <ng-template #noUser>
+        <div class="user-profile" (click)="display()" id="user">
+          <img
+            src="../../assets/Images/user-profile.svg"
+            class="user-profile-img"
+          />
+        </div>
+        <button
+          *ngIf="user"
+          class="btn btn-default profile-template"
+          (click)="logout()"
+          id="profile-template"
+        >
+          Logout
+        </button>
+      </ng-template>
     </ul>
   </div>
 </nav>

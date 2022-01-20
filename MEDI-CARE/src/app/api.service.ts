@@ -52,4 +52,7 @@ export class apiService {
   loginUser(params: any): Observable<any> {
     return this.http.post(config.api_url + 'loginUser', params);
   }
+  contactInfo(params: any): Observable<any> {
+    return this.http.post(config.api_url + 'contactus', params);
+  }
 }

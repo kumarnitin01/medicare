@@ -64,3 +64,26 @@
     color: #fff;
   }
 }
+
+.profile-template {
+  position: absolute;
+  top: 100%;
+  right: 4%;
+  background-color: #fff;
+  color: #121212;
+  margin-top: -0.4rem;
+  display: none;
+}
+
+.user-profile-img {
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  right: 4.5%;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.show {
+  display: block !important;
+}

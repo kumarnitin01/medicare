@@ -7,14 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  user = localStorage.getItem('currentUser') || undefined;
+  user = localStorage.getItem('currUser') || undefined;
+  profile: any;
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
   logout(): void {
-    console.log('logout');
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currUser');
     this.user = undefined;
     this.router.navigate(['/register/login']);
+  }
+  display(): void {
+    this.profile = document.getElementById('profile-template');
+    this.profile.classList.toggle('show');
   }
 }

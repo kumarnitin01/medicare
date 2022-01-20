@@ -28,5 +28,6 @@ router.get("/hospitals", admin.listHospital);
 //user routes
 router.post("/register", user.register);
 router.post("/loginUser", user.loginUser);
+router.post("/contactus", user.contactus);
 
 module.exports = router;

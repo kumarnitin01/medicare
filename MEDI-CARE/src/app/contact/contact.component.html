@@ -6,7 +6,12 @@
       <img src="../../assets/Images/contact-img.jpg" alt="image" />
     </div>
     <div class="col-6" style="padding: 20px">
-      <form action="#" class="form" style="font-size: 1.6rem">
+      <form
+        class="form"
+        style="font-size: 1.6rem"
+        [formGroup]="contact"
+        (ngSubmit)="contactForm()"
+      >
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label"> Name</label>
           <input
@@ -14,6 +19,7 @@
             class="form-control"
             id="formGroupExampleInput"
             placeholder="Enter Your Name"
+            formControlName="name"
           />
         </div>
         <div class="mb-3">
@@ -23,6 +29,7 @@
             class="form-control"
             id="formGroupExampleInput2"
             placeholder="Enter Your Email"
+            formControlName="email"
           />
         </div>
         <div class="mb-3">
@@ -30,10 +37,11 @@
             Phone Number</label
           >
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="formGroupExampleInput2"
             placeholder="Enter Your Phone Number"
+            formControlName="phone"
           />
         </div>
         <div class="mb-3">
@@ -45,11 +53,12 @@
             id="exampleFormControlTextarea1"
             rows="6"
             placeholder="How can we help you?"
+            formControlName="message"
           ></textarea>
         </div>
         <div class="mb-3">
           <input
-            type="button"
+            type="submit"
             value="Submit"
             class="btn btn-success text-white mt-3"
           />
@@ -59,7 +68,7 @@
   </div>
 </div>
 
-<div class="container faq" style="margin-top: 80px">
+<div class="container faq" style="margin-top: 80px" id="faq">
   <h1 class="heading-secondary text-center mb-5">Frequently Asked Questions</h1>
 
   <mat-accordion>
